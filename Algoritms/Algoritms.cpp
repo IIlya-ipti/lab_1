@@ -19,11 +19,11 @@ list* Initial() {
     return s;
 }
 list* AddElement(list* s, int key, char* word) {
-    list* q,*p;
+    list* q, * p;
     p = s;
     q = s->next;
     Last->key = key;
-    while ((q!= NULL) && (q->key < key)) {
+    while ((q != NULL) && (q->key < key)) {
         p = q;
         q = q->next;
     }
@@ -70,7 +70,7 @@ int main()
 
     while (true) {
         if (fscanf(f, "%s", &buf) == -1)break;
-        if(fscanf(f, "%d", &num) == -1)break;
+        if (fscanf(f, "%d", &num) == -1)break;
         word = new char[strlen(buf)];
         strcpy(word, buf);
         try
@@ -84,15 +84,15 @@ int main()
         }
     }
     PrintElement(s);
-   
 
 
-   
+
+
     return 0;
-    
+
 
     // вставка элемента между т
 
-    
+
 }
 
